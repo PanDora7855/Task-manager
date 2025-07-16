@@ -1,0 +1,18 @@
+.card {
+	max-width: 450px;
+	padding: 16px 16px 10px;
+	border-radius: 16px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+}
+
+.chips {
+	margin: 10px 0;
+	display: flex;
+	gap: 8px;
+}

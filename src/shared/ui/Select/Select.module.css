@@ -1,0 +1,100 @@
+.selectContainer {
+	position: relative;
+}
+
+.selectButton {
+	position: relative;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+	border: 2px solid #e5e7eb;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.selectButton:hover {
+	border-color: #d1d5db;
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.colorIndicator {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	flex-shrink: 0;
+}
+
+.selectText {
+	color: #1f2937;
+	font-size: 16px;
+}
+
+.selectText.placeholder {
+	color: #9ca3af;
+}
+
+.dropdown {
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 0;
+	right: 0;
+	background: white;
+	border-radius: 16px;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	border: 1px solid #e5e7eb;
+	overflow: hidden;
+	z-index: 50;
+	animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.dropdownContent {
+	max-height: 256px;
+	overflow-y: auto;
+}
+
+.option {
+	display: flex;
+	width: 100%;
+	border: none;
+	background: none;
+	align-items: center;
+	padding: 12px;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	gap: 12px;
+	border-bottom: 1px solid #f3f4f6;
+}
+
+.option:last-child {
+	border-bottom: none;
+}
+
+.option:hover {
+	background: #f9fafb;
+}
+
+.optionText {
+	color: #1f2937;
+	transition: color 0.15s ease;
+}
+
+.option:hover .optionText {
+	color: #111827;
+}
